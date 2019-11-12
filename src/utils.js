@@ -102,6 +102,7 @@ function getConnectionFromSlice(inSlice, mapper, args, count) {
   return {
     edges: edges,
     pageInfo: {
+      totalCount: count,
       startCursor: firstEdge ? firstEdge.cursor : null,
       endCursor: lastEdge ? lastEdge.cursor : null,
       hasPreviousPage: last !== null ? startOffset > lowerBound : false,
